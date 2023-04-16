@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%if(editMode) {%>
+        <link rel="stylesheet" href="../../question.css">
+        <script src="../../question.js"></script>
+    <%} else {%>
+        <link rel="stylesheet" href="../question.css">
+        <script src="../question.js"></script>
+    <% } %>
+    <title>Add Question</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Question</h2>
+        <label for="question">Type Your question here :</label>
+        <div id="question_error" class="error"></div>
+        <input type="text" id="question" name="question" placeholder="qurstion" value="<%if(editMode){%><%=question.question%><%}%>">
+        <div id="a_error" class="error"></div>
+        <input type="text" id="a" name="a" placeholder="answer a..." value="<%if(editMode){%><%=question.a%><%}%>">
+        <div id="b_error" class="error"></div>
+        <input type="text" id="b" name="b" placeholder="answer b..." value="<%if(editMode){%><%=question.b%><%}%>">
+        <div id="c_error" class="error"></div>
+        <input type="text" id="c" name="c" placeholder="answer c..." value="<%if(editMode){%><%=question.c%><%}%>">
+        <div id="d_error" class="error"></div>
+        <input type="text" id="d" name="d" placeholder="answer d..." value="<%if(editMode){%><%=question.d%><%}%>">
+        <div id="correct_error" class="error"></div>
+        <input type="text" id="correct" name="correct" placeholder="correct answer..." value="<%if(editMode){%><%= question.correct%><%}%>">
+        <button onclick="<%if(editMode){%> edit() <%} else {%> add() <%}%>"><%if(editMode){%> Edit <%} else {%> Add <%}%></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../quiz.css">
+    <script src="../quiz.js"></script>
+    <title>Quiz</title>
+</head>
+<body>
+    <!-- <div id="spinner"></div> -->
+
+    <div class="quiz-container" id="quiz">
+        <h2>Quiz</h2>
+        <div class="questions">
+            <%questions.forEach((question, index) => {%>
+                <div class="question">
+                    <div class="questionHead"><%= index+1%>. <%= question.question%></div>
+                    <div class="answers">
+                        <div class="answer">a. <%= question.a%></div>
+                        <div class="answer">b. <%= question.b%></div>
+                        <div class="answer">c. <%= question.c%></div>
+                        <div class="answer">d. <%= question.d%></div>
+                    </div>
+                    <div class="buttons">
+                        <a class="edit" href="/admin/question/<%= question._id%>">Edit</a>
+                        <a class="delete" value="<%= question._id%>" onclick="deleteQuestion(this.getAttribute('value'))">Delete</a>
+                    </div>
+                </div>
+            <%});%>
+        </div>
+        <a class="addQuestion" onclick="addQuestion()">Add Question</a>
+    </div>
+</body>
+</html>

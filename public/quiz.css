@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.quiz-container{
+  background-color: #fcfcff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+}
+.quiz-container h2{
+  text-align: center;
+}
+.quiz-container .question{
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: .4em;
+  margin: 1.2rem;
+  padding: 1.2rem;
+  position: relative;
+}
+.quiz-container .question .questionHead{
+  font-weight: bold;
+  font-size: 18px;
+}
+.quiz-container .question .answers{
+  padding: .5rem;
+}
+.quiz-container .question .buttons{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: .5rem;
+}
+.quiz-container .question .buttons a{
+  text-decoration: none;
+  display: inline;
+  color: white;
+  padding: .2rem .5rem;
+  border-radius: .4em;
+  cursor: pointer;
+}
+.quiz-container .question .buttons form{
+  display: inline;
+}
+.quiz-container .question .buttons button{
+  border: none;
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+  padding: .25rem .5rem;
+  border-radius: .4em;
+  cursor: pointer;
+}
+.quiz-container .question .buttons .edit{
+  background-color: #3C6255;
+}
+.quiz-container .question .buttons .edit:hover{
+  background-color: #2b473d;
+}
+.quiz-container .question .buttons .delete{
+  background-color: #FF4C29;
+}
+.quiz-container .question .buttons .delete:hover{
+  background-color: #f8350e;
+}
+.quiz-container .addQuestion{
+  background-color: #3C6255;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1rem;
+  text-align: center;
+}
+.quiz-container .addQuestion:hover{
+  background-color: #2b473d;
+}
+
+/* Spinner */
+#spinner {
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #555;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.5s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
