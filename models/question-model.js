@@ -6,23 +6,23 @@ const Question = mongoose.Schema({
     },
     a: {
         type: String,
-        required: [true, 'Please enter the anser a !']
+        required: [true, 'Please enter the answer a !']
     },
     b: {
         type: String,
-        required: [true, 'Please enter the anser b !']
+        required: [true, 'Please enter the answer b !']
     },
     c: {
         type: String,
-        required: [true, 'Please enter the Question c !']
+        required: [true, 'Please enter the answer c !']
     },
     d: {
         type: String,
-        required: [true, 'Please enter the Question d !']
+        required: [true, 'Please enter the answer d !']
     },
     correct: {
         type: String,
-        required: [true, 'Enter correct answer !'],
+        required: [true, 'Please enter correct answer !'],
         enum:{
             values: [
                 "a",
